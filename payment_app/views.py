@@ -4,7 +4,7 @@ from payment_app.domain import CURRENCY
 payment_bp = Blueprint("payment", __name__)
 
 
-@payment_bp.route("/payment", methods=["GET", "POST"])
+@payment_bp.route("/", methods=["GET", "POST"])
 def payment_form():
     if request.method == "GET":
         return render_template("payment_form.html")
