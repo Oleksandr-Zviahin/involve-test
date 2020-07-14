@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <form method="{{ payment_info['method'] }}" action="{{ payment_info['url'] }}" accept-charset="UTF-8">
+            {% for k, v in payment_info['data'].items() %}
+                <input name="{{ k }}" value="{{ v }}" type="hidden"/>
+            {% endfor %}
+        </form>
+        <script>
+            document.forms[0].submit();
+        </script>
+    </body>
+</html>

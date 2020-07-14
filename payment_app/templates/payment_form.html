@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment details page</title>
+</head>
+<body>
+    <div>
+        <h1>Enter payment details</h1>
+        <form method="post">
+            <div>
+                <label for="amount">Payment amount:</label>
+                <input type="number" step="0.01" name="amount" id="amount" required/>
+            </div>
+            <div>
+                <label for="currency">Currency:</label>
+                <select name="currency" id="currency" required>
+                    <option value="978">EUR</option>
+                    <option value="840">USD</option>
+                    <option value="643">RUB</option>
+                </select>
+            </div>
+            <div>
+                <div>
+                    <label for="description">Description:</label>
+                </div>
+                <div>
+                    <textarea name="description" id="description" cols="50" rows="10"></textarea>
+                </div>
+            </div>
+
+            <button type="submit">Pay</button>
+        </form>
+    </div>
+</body>
+</html>
